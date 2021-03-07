@@ -1,0 +1,42 @@
+[
+   {
+      "name":"Dining Chair",
+      "articles":[
+         {
+            "art_id":"1",
+            "stock":"4",
+            "name":"Test article"
+         },
+         {
+            "art_id":"2",
+            "stock":"8",
+            "name":"Test article2"
+         },
+         {
+            "art_id":"3",
+            "stock":"1",
+            "name":"Test article3"
+         }
+      ]
+   },
+   {
+      "name":"Dinning Table",
+      "articles":[
+         {
+            "art_id":"1",
+            "stock":"4",
+            "name":"Test article"
+         },
+         {
+            "art_id":"2",
+            "stock":"8",
+            "name":"Test article2"
+         },
+         {
+            "art_id":"4",
+            "stock":"1",
+            "name":"Test article4"
+         }
+      ]
+   }
+]
