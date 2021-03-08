@@ -5,6 +5,8 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 /**
+ * Products JPA repository.
+ *
  * @author Shivaji Pote
  **/
 @Repository

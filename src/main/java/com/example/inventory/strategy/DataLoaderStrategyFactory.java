@@ -6,6 +6,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 /**
+ * This is factory class to determine the strategy to be executed.
+ *
  * @author Shivaji Pote
  **/
 @Log4j2
@@ -15,6 +17,14 @@ public class DataLoaderStrategyFactory {
 
   private final ApplicationContext context;
 
+  /**
+   * This method returns {@link ProductLoaderStrategy} or {@link ArticleLoaderStrategy} based on name of the file. If
+   * file name is invalid, it reuturns null.
+   *
+   * @param fileName file name
+   * @return {@link DataLoaderStrategy} pointing to instance of either {@link ArticleLoaderStrategy} or {@link
+   * ProductLoaderStrategy}. It returns null of file name is invalid.
+   */
   public DataLoaderStrategy getStrategy(final String fileName) {
     final DataLoaderStrategy strategy;
     switch (fileName) {

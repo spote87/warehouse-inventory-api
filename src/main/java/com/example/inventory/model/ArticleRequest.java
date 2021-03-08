@@ -8,6 +8,8 @@ import lombok.Setter;
 import java.util.List;
 
 /**
+ * Model class holding article request data.
+ *
  * @author Shivaji Pote
  **/
 @Getter

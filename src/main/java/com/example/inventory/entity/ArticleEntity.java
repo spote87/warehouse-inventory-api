@@ -1,5 +1,6 @@
 package com.example.inventory.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,12 +12,15 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
+ * This is entity class for <em>ARTICLE</em> table.
+ *
  * @author Shivaji Pote
  **/
 @Getter
 @Setter
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "ARTICLE")
 public class ArticleEntity implements Serializable {
 
@@ -31,11 +35,5 @@ public class ArticleEntity implements Serializable {
 
   @Column(name = "AVAILABLE_STOCK", nullable = false)
   private int availableStock;
-
-  public ArticleEntity(final long articleId, final String name, final int availableStock) {
-    this.articleId = articleId;
-    this.name = name;
-    this.availableStock = availableStock;
-  }
 
 }

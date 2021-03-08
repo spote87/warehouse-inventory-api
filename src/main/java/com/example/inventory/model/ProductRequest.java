@@ -6,6 +6,8 @@ import lombok.Setter;
 import java.util.List;
 
 /**
+ * Model class holding product request data.
+ *
  * @author Shivaji Pote
  **/
 @Getter

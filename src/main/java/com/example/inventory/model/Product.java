@@ -9,6 +9,8 @@ import java.math.BigDecimal;
 import java.util.List;
 
 /**
+ * Model class holding product data.
+ *
  * @author Shivaji Pote
  **/
 @Getter

@@ -9,6 +9,8 @@ import java.math.BigDecimal;
 import java.util.List;
 
 /**
+ * DTO class holding products data.
+ *
  * @author Shivaji Pote
  **/
 @Getter

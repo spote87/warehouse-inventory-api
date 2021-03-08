@@ -8,12 +8,19 @@ import org.springframework.web.server.ResponseStatusException;
 import java.io.IOException;
 
 /**
+ * Exception handler class for warehouse inventory application.
+ *
  * @author Shivaji Pote
  **/
 @Log4j2
 @ControllerAdvice
 public class ExceptionHandler {
 
+  /**
+   * This method handles application wide {@link IOException}.
+   *
+   * @param e {@code IOException} instance
+   */
   @org.springframework.web.bind.annotation.ExceptionHandler(IOException.class)
   public void handleIOException(final IOException e) {
     log.error("Error occurred while loading data", e);

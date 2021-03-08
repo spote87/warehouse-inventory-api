@@ -20,6 +20,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
+ * {@link ProductService} implementation.
+ *
  * @author Shivaji Pote
  **/
 @Log4j2
@@ -31,18 +33,33 @@ public class ProductServiceImpl implements ProductService {
 
   private final ArticleRepository articleRepository;
 
+  /**
+   * {@inheritDoc}
+   *
+   * @param productRequest {@link ProductRequest} containing products data which need to be loaded in database.
+   */
   @Override
   public void saveProducts(final ProductRequest productRequest) {
     final Iterable<ProductEntity> products = productRequest.getProducts().stream().map(this::getProductEntity).collect(Collectors.toList());
     productRepository.saveAll(products);
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return list of {@link ProductDTO}
+   */
   @Override
   public List<ProductDTO> getAllProducts() {
     final List<ProductEntity> productEntities = (List<ProductEntity>) productRepository.findAll();
     return productEntities.stream().map(this::getProduct).collect(Collectors.toList());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @param productId id of the product which needs to be sold
+   */
   @Override
   public void saleProduct(final long productId) {
     final ProductEntity product = productRepository.findById(productId).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found in database"));

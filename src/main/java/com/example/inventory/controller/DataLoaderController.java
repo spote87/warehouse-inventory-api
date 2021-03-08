@@ -17,6 +17,8 @@ import org.springframework.web.server.ResponseStatusException;
 import java.io.IOException;
 
 /**
+ * This controller contains endpoints to load data in system.
+ *
  * @author Shivaji Pote
  **/
 @Log4j2
@@ -28,6 +30,13 @@ public class DataLoaderController {
 
   private DataLoaderContext dataLoaderContext;
 
+  /**
+   * This endpoint loads data in warehouse inventory.
+   *
+   * @param multipartFile file containing inventory data
+   * @return success message
+   * @throws IOException if fails to read file from {@link MultipartFile}
+   */
   @PostMapping(value = "load", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
   public ResponseEntity<String> loadData(@RequestParam("file") final MultipartFile multipartFile) throws IOException {
     log.debug("Loading inventory");

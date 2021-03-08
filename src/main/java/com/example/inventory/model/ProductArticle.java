@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
+ * Model class holding product article data.
+ *
  * @author Shivaji Pote
  **/
 @Getter

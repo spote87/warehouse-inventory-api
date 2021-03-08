@@ -7,6 +7,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
+ * This is entity class for <em>PRODUCT_ARTICLE</em> table.
+ *
  * @author Shivaji Pote
  **/
 @Getter
@@ -23,6 +25,9 @@ public class ProductArticleEntity implements Serializable {
   @Column(name = "QUANTITY", nullable = false)
   private int quantity;
 
+  /**
+   * This is composite key class for <em>PRODUCT_ARTICLE</em> table.
+   */
   @Getter
   @Setter
   @Embeddable

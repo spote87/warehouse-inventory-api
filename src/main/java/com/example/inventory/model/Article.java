@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 /**
+ * Model class for holding article data.
+ *
  * @author Shivaji Pote
  **/
 @Getter

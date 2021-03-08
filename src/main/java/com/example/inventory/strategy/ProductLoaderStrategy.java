@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
+ * Products data loader strategy implementation.
+ *
  * @author Shivaji Pote
  **/
 @Lazy
@@ -24,6 +26,12 @@ public class ProductLoaderStrategy implements DataLoaderStrategy {
 
   private final ObjectMapper objectMapper = new ObjectMapper();
 
+  /**
+   * This method loads products data in database.
+   *
+   * @param data {@link InputStream} containing produts data to be loaded in database
+   * @throws IOException if fails to read products data from passed input stream
+   */
   @Override
   public void load(final InputStream data) throws IOException {
     log.info("Loading products data");

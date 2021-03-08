@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
+ * Strategy implementation for articles.
+ *
  * @author Shivaji Pote
  **/
 @Lazy
@@ -24,6 +26,12 @@ public class ArticleLoaderStrategy implements DataLoaderStrategy {
 
   private final ObjectMapper objectMapper = new ObjectMapper();
 
+  /**
+   * This method loads articles data in warehouse inventory database.
+   *
+   * @param data {@link InputStream} containing article data to be loaded in database
+   * @throws IOException if fails to read articles data
+   */
   @Override
   public void load(final InputStream data) throws IOException {
     log.info("Loading articles data");
